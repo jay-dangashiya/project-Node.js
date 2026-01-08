@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
+
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Contact Info -->
+        <div class="flex flex-col justify-center">
+            <h1 class="text-4xl font-extrabold text-green-700">Get in Touch</h1>
+            <p class="mt-4 text-gray-600">
+                Have any questions or suggestions? Feel free to contact us anytime.
+            </p>
+
+            <div class="mt-6">
+                <p class="text-lg font-semibold text-gray-700">📧 Email</p>
+                <p class="text-green-600">pjay22756@gmail.com</p>
+            </div>
+
+            <div class="mt-4">
+                <p class="text-lg font-semibold text-gray-700">📍 Location</p>
+                <p class="text-gray-600">India</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="space-y-4">
+            <input type="text" placeholder="Your Name"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+
+            <input type="email" placeholder="Your Email"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+
+            <textarea rows="4" placeholder="Your Message"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+
+            <button type="submit"
+                class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">
+                Send Message
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>
