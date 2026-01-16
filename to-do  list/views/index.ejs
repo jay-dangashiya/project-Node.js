@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <section class="todo-wrapper">
+        <header class="todo-header">
+            <h2>My Tasks</h2>
+        </header>
+
+        <form class="todo-form" action="/add" method="POST">
+            <input 
+                type="text" 
+                name="task" 
+                placeholder="What do you want to do?" 
+                required
+            >
+            <button type="submit">+</button>
+        </form>
+
+        <div class="todo-list">
+            <% if (todos.length === 0) { %>
+                <p class="empty">No tasks available</p>
+            <% } %>
+
+            <% todos.forEach(todo => { %>
+                <div class="todo-item">
+                    <span class="todo-text"><%= todo.task %></span>
+
+                    <div class="todo-actions">
+                        <a href="/edit/<%= todo.id %>" class="btn edit">Edit</a>
+
+                        <form action="/delete/<%= todo.id %>" method="POST">
+                            <button class="btn delete" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</body>
+</html>
