@@ -1,0 +1,10 @@
+<h2>Edit Book</h2>
+<form action="/admin/edit/<%= book._id %>" method="POST">
+    <input name="title" value="<%= book.title %>">
+    <input name="author" value="<%= book.author %>">
+    <input name="price" type="number" value="<%= book.price %>">
+    <input name="category" value="<%= book.category %>">
+    <input name="image" value="<%= book.image %>">
+    <textarea name="description"><%= book.description %></textarea>
+    <button type="submit">Update</button>
+</form>
