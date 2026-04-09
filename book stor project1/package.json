@@ -1,0 +1,20 @@
+{
+  "name": "book-store-project",
+  "version": "1.0.0",
+  "description": "A simple book store project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "book",
+    "store",
+    "nodejs"
+  ],
+  "author": "your-name",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

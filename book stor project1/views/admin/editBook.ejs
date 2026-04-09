@@ -1,0 +1,25 @@
+<%- include("../layouts/header") %>
+
+    <h1 class="text-3xl font-bold mb-6">Edit Book</h1>
+
+    <form action="/admin/edit/<%= book._id %>?_method=PUT" method="POST" class="bg-white p-6 rounded shadow-lg">
+
+        <input type="text" name="title" value="<%= book.title %>" class="w-full border p-2 mb-4 rounded" required>
+
+        <input type="text" name="author" value="<%= book.author %>" class="w-full border p-2 mb-4 rounded" required>
+
+        <input type="number" name="price" value="<%= book.price %>" class="w-full border p-2 mb-4 rounded" required>
+
+        <input type="text" name="category" value="<%= book.category %>" class="w-full border p-2 mb-4 rounded" required>
+
+        <input type="text" name="image" value="<%= book.image %>" class="w-full border p-2 mb-4 rounded" required>
+
+        <textarea name="description" class="w-full border p-2 mb-4 rounded" required><%= book.description %></textarea>
+
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">
+            Update Book
+        </button>
+
+    </form>
+
+    <%- include("../layouts/footer") %>
