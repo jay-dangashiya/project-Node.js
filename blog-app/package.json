@@ -1,0 +1,23 @@
+{
+  "name": "blog-project-1",
+  "version": "1.0.0",
+  "description": "Blog Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": ["blog", "node", "express", "mongodb"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0",
+    "ejs": "^3.1.9",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

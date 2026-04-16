@@ -1,0 +1,67 @@
+<%- include("../layout/siteHeader") %>
+
+    <!-- Blog Article -->
+    <article class="max-w-4xl mx-auto">
+
+        <!-- Back Button -->
+        <a href="/" class="inline-flex items-center text-gray-600 hover:text-primary mb-6 transition-colors group">
+            <i class="fas fa-arrow-left mr-2 transform group-hover:-translate-x-1 transition-transform"></i>
+            Back to Home
+        </a>
+
+        <!-- Blog Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+
+            <!-- Image -->
+            <div class="h-64 md:h-96 overflow-hidden">
+                <img src="/uploads/<%= blog.image %>" alt="<%= blog.title %>" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 md:p-10">
+
+                <!-- Meta Info -->
+                <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <span class="inline-flex items-center text-gray-500 text-sm">
+                        <i class="fas fa-clock mr-2"></i>
+                        <%= Math.ceil(blog.description.split(' ').length / 200) %> min read
+                    </span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                    <%= blog.title %>
+                </h1>
+
+                <!-- Divider -->
+                <hr class="border-gray-100 mb-8" />
+
+                <!-- Description -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed whitespace-pre-line text-lg">
+                        <%= blog.description %>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-8 flex justify-between">
+            <a href="/" class="inline-flex items-center px-5 py-3 bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all">
+                <i class="fas fa-arrow-left mr-2"></i>
+                All Blogs
+            </a>
+        </div>
+
+    </article>
+
+    <script>
+        function copyToClipboard() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert(' Link copied to clipboard!');
+            });
+        } </script>
+
+                            <%- include("../layout/siteFooter") %>

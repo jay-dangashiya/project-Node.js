@@ -1,0 +1,128 @@
+<%- include("../layout/adminHeader") %>
+
+    <!-- Page Header -->
+    <div class="mb-8">
+        <h2 class="text-3xl font-bold text-dark">
+            Dashboard
+        </h2>
+        <p class="text-gray-500 mt-1">Welcome back! Here's an overview of your blog.</p>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+        <!-- Total Blogs Card -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-500 text-sm font-medium">Total Blogs</p>
+                    <p class="text-4xl font-bold text-dark mt-2">
+                        <%= typeof totalBlogs !=="undefined" ? totalBlogs : 0 %>
+                    </p>
+                </div>
+                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-blog text-blue-600 text-2xl"></i>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center text-sm text-gray-500">
+                <i class="fas fa-chart-line mr-2 text-green-500"></i>
+                <span>Active content</span>
+            </div>
+        </div>
+
+        <!-- Add New Blog Card -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-500 text-sm font-medium">Create Content</p>
+                    <p class="text-lg font-semibold text-dark mt-2">Add New Blog</p>
+                </div>
+                <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-plus-circle text-green-600 text-2xl"></i>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="/admin/add-blog"
+                    class="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
+                    <i class="fas fa-plus mr-2"></i>
+                    Create Blog
+                </a>
+            </div>
+        </div>
+
+        <!-- Manage Blogs Card -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-500 text-sm font-medium">Manage</p>
+                    <p class="text-lg font-semibold text-dark mt-2">All Blogs</p>
+                </div>
+                <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-cogs text-purple-600 text-2xl"></i>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="/admin/blogs"
+                    class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">
+                    <i class="fas fa-list mr-2"></i>
+                    View Blogs
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <h3 class="text-lg font-semibold text-dark mb-4">
+            <i class="fas fa-bolt text-yellow-500 mr-2"></i>Quick Actions
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="/admin/add-blog"
+                class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group">
+                <div
+                    class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-medium text-dark">New Blog</p>
+                    <p class="text-xs text-gray-500">Create a post</p>
+                </div>
+            </a>
+            <a href="/admin/blogs"
+                class="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors group">
+                <div
+                    class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                    <i class="fas fa-list"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-medium text-dark">All Posts</p>
+                    <p class="text-xs text-gray-500">Manage content</p>
+                </div>
+            </a>
+            <a href="/" target="_blank"
+                class="flex items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors group">
+                <div
+                    class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-medium text-dark">View Site</p>
+                    <p class="text-xs text-gray-500">Open website</p>
+                </div>
+            </a>
+            <a href="/logout"
+                class="flex items-center p-4 bg-red-50 rounded-lg hover:bg-red-100 transition-colors group">
+                <div
+                    class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-medium text-dark">Logout</p>
+                    <p class="text-xs text-gray-500">Sign out</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <%- include("../layout/adminFooter") %>
