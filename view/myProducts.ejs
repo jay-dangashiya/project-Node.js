@@ -1,0 +1,15 @@
+<%- include("partials/navbar") %>
+
+<h2>My Products</h2>
+
+<% if(products.length === 0){ %>
+  <p>You have not added any products</p>
+<% } %>
+
+<% products.forEach(p => { %>
+  <div style="border:1px solid green;padding:10px;margin:10px;">
+    <h3><%= p.name %></h3>
+    <p>Price: ₹<%= p.price %></p>
+    <p>Category: <%= p.category?.name %></p>
+  </div>
+<% }) %>
