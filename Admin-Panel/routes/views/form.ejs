@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+
+    <div class="bg-white p-6 rounded shadow max-w-md">
+        <h1 class="text-xl font-bold mb-4">Add Student</h1>
+
+        <form action="/add" method="POST">
+
+            <input type="text" name="name" placeholder="Enter Name" class="w-full p-2 border mb-3 rounded" required>
+
+            <input type="email" name="email" placeholder="Enter Email" class="w-full p-2 border mb-3 rounded" required>
+
+            <input type="text" name="course" placeholder="Enter Course" class="w-full p-2 border mb-4 rounded" required>
+
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+                Submit
+            </button>
+
+        </form>
+    </div>
+
+    <%- include("partials/footer") %>
